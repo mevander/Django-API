@@ -1,84 +1,59 @@
-#RClients
+#App house
 
 #####Tecnologias utilizadas
 
-- **Python 3.7.4**
-- **Django 2.2**
+- **Python 3.9.5**
+- **Django 3.2**
 - **Django Rest Framework**
 
-O Projeto **RClients** é o BackEnd do projeto **CClients**, as definições de uso dos endpoints seguem o formato das aplicações padrões desenvolvidas com o Django Rest Framework, ou seja, um end-point trata de uma tabela que é representada por uma model, os verbos utilizados serão os **GET**, **POST**, **PUT** e **DELETE**.
+O App **house** é um projeto backend com o propósito de demonstrar meus conhecimentos em API REST, as definições de uso dos end-points seguem o formato das aplicações padrões desenvolvidas com o Django Rest Framework, ou seja, um end-point trata de uma tabela que é representada por uma model, os verbos utilizados serão os **GET**, **POST**, **PUT** e **DELETE**.
 
-Abaixo seguirá o contrato de como as respostas em _JSON_ serão retornadas e como os _REQUEST_ deverão ser enviadas a aplicação sendo que para os verbos **PUT** e **DELETE** as requisições deverão ser enviadas juntamente o parâmetro ID na URL. Os EndPoints serão dividos por sua Tabela(Model).
+Abaixo seguirá o contrato de como as respostas em _JSON_ serão retornadas e como os _REQUEST_ deverão ser enviadas a aplicação sendo que para os verbos **PUT** e **DELETE** as requisições deverão ser enviadas juntamente o parâmetro ID na URL. Os end-points serão dividos por sua Tabela(Model).
 
-**Listar/Criar Clientes**
+Lembrando que o Django provê uma interface básica para uso/testes dos end-points, que pode ser acessada no endereço no qual a aplicação foi iniciada
 
-- <https://localhost:0000/Cliente/>
+**Listar/Criar Imobiliária**
+
+- <https://host:0000/Imobiliaria/>
+
+**Response status**
+
+- **200 OK** - Sucesso
+- **201 Created** - Sucesso
 
 **Json**
 
 ```json
 [
     {
-        "id": 0,
         "nome": "String",
-        "sexo": "String",
-        "telefone": "String",
-        "celular": "String",
-        "email": "String",
-        "dtnasc": "String",
-        "cpf": "String",
-        "rg": "String",
-        "enderecos": [
-            {
-                "rua": "String",
-                "bairro": "String",
-                "numero": "String",
-                "cep": "String",
-                "cidade": "String",
-                "uf": "String"
-            }
-        ]
+        "endereco": "String"
     }
 ]
 ````
 
 
-**Obter/Excluir/Atualizar Cliente**
-- <https://localhost:0000/Cliente/{id}>
+**Obter/Excluir/Atualizar Imobiliária**
+- <https://host:0000/imobiliaria/{id}>
 
 **Parâmetros**
 
-- **ID** -  Id do cliente a ser retornado
+- **ID** -  Id do imobiliaria a ser retornado
 
 **Json**
 
 ```json
-{
-    "id": 0,
-    "nome": "String",
-    "sexo": "String",
-    "telefone": "String",
-    "celular": "String",
-    "email": "String",
-    "dtnasc": "String",
-    "cpf": "String",
-    "rg": "String",
-    "enderecos": [
-        {
-            "rua": "String",
-            "bairro": "String",
-            "numero": "String",
-            "cep": "String",
-            "cidade": "String",
-            "uf": "String"
-        }
-    ]
-}
+[
+    {
+        "nome": "String",
+        "endereco": "String"
+    }
+]
 ````
 
-**Criar/Listar Endereços**
+**Criar/Listar Imóvel**
 
-- <https://localhost:0000/Endereco/>
+- <https://host:0000/Imovel/>
 
 **Response status**
 
@@ -89,36 +64,38 @@ Abaixo seguirá o contrato de como as respostas em _JSON_ serão retornadas e co
 ```json
 [
     {
-        "id": 0,
-        "rua": "String",
-        "bairro": "String",
-        "numero": "String",
-        "cep": "String",
-        "cidade": "String",
-        "uf": "String",
-        "idcliente": 0
+        "nome": "String",
+        "endereco": "String",
+        "descricao": "String",
+        "status": 0,
+        "caracteristicas": "String",
+        "tipo": 0,
+        "finalidade": 0,
+        "imobiliaria": "00000000-0000-0000-0000-000000000000"
     }
 ]
 ````
 
-**Obter/Excluir/Atualizar Endereco**
-- <https://localhost:0000/Endereco/{id}>
+**Obter/Excluir/Atualizar Imóvel**
+- <https://host:0000/Imovel/{id}>
 
 **Parâmetros**
 
-- **ID** -  Id do Endereco a ser retornado
+- **ID** -  Id do Imóvel a ser retornado
 
 **Json**
 
 ```json
+[
     {
-        "id": 0,
-        "rua": "String",
-        "bairro": "String",
-        "numero": "String",
-        "cep": "String",
-        "cidade": "String",
-        "uf": "String",
-        "idcliente": 0
+        "nome": "String",
+        "endereco": "String",
+        "descricao": "String",
+        "status": 0,
+        "caracteristicas": "String",
+        "tipo": 0,
+        "finalidade": 0,
+        "imobiliaria": "00000000-0000-0000-0000-000000000000"
     }
+]
 ````
