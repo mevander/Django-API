@@ -1,6 +1,6 @@
-#App house
+<h1>App house</h1>
 
-#####Tecnologias utilizadas
+<h5>Tecnologias utilizadas</h5>
 
 - **Python 3.9.5**
 - **Django 3.2**
