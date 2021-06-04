@@ -36,6 +36,10 @@ Lembrando que o Django provê uma interface básica para uso/testes dos end-poin
 **Obter/Excluir/Atualizar Imobiliária**
 - <https://host:0000/imobiliaria/{id}>
 
+**Response status**
+
+- **200 OK** - Sucesso
+
 **Parâmetros**
 
 - **ID** -  Id do imobiliaria a ser retornado
@@ -58,6 +62,7 @@ Lembrando que o Django provê uma interface básica para uso/testes dos end-poin
 **Response status**
 
 - **200 OK** - Sucesso
+- **201 Created** - Sucesso
 
 **Json**
 
@@ -78,6 +83,10 @@ Lembrando que o Django provê uma interface básica para uso/testes dos end-poin
 
 **Obter/Excluir/Atualizar Imóvel**
 - <https://host:0000/Imovel/{id}>
+
+**Response status**
+
+- **200 OK** - Sucesso
 
 **Parâmetros**
 
